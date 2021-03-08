@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Todo.css";
 
 class ToDoForm extends React.Component{
     constructor(){
@@ -34,11 +34,12 @@ class ToDoForm extends React.Component{
             return (
                 <div className="ToDoForm">
                     <form onSubmit={this.handleNewItemSubmit} >
-                    <label htmlFor="task">Enter A New Item:
-                        <input name="task" id="task" value={this.state.newItem.task} onChange={this.handleNewItemChange} />
+                    <label htmlFor="task">
+                        <input name="task" id="task" placeholder="Enter New Item" value={this.state.newItem.task} onChange={this.handleNewItemChange} />
                         <button>Add Item</button>
                     </label>
                     </form>
+                    <p className="howToKey">*Click Each Task When Done To Cross It Out</p>
                 </div>
             )
         }
