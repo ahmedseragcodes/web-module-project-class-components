@@ -1,6 +1,10 @@
+//TECH IMPORTS 
 import React from 'react';
+//STYLING IMPORTS
 import "./components/Todo.css";
+//COMPONENT IMPORTS 
 import ToDoList from "./components/TodoList";
+import ToDoForm from "./components/TodoForm";
 
 const data=[
   {
@@ -37,11 +41,19 @@ class App extends React.Component {
       todos: data
     }
   }
+
+handleAddItem = (newItem)=>{
+  this.setState({
+    todos: [...this.state.todos, newItem]
+  })
+}
+
   render() {
     return (
-      <div>
+      <div className="catchAll">
         <h2>To Do List</h2>
         <ToDoList todos={this.state.todos} />
+        <ToDoForm todos={this.state.todos} handleAddItem={this.handleAddItem} />
       </div>
     );
   }

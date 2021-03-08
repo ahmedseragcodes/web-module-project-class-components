@@ -1,3 +1,4 @@
+/*GENERAL STYLING */
 * {
     box-sizing: border-box;
     max-width: 100%;
@@ -7,6 +8,23 @@ html {
     font-family: 'PT Sans', "sans-serif";
 }
 
+/* CUSTOM STYLING */
+
+.catchAll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
 .individualItem {
-    font-size: 2rem;
+    box-shadow: 1rem 1rem 2rem 0rem black;
+    padding: 1rem;
+    margin: 1rem;
+}
+.ToDoForm {
+    
+}
+input, label {
+    margin: 1rem;
 }
