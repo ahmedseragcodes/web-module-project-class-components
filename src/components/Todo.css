@@ -22,6 +22,12 @@ html {
     padding: 1rem;
     margin: 1rem;
 }
+.individualItemcompleted {
+    box-shadow: 1rem 1rem 2rem 0rem black;
+    padding: 1rem;
+    margin: 1rem;
+    text-decoration: line-through;
+}
 .ToDoForm {
     
 }

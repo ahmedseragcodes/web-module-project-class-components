@@ -42,9 +42,25 @@ class App extends React.Component {
     }
   }
 
+  //HELPER FUNCTION FOR ADDING NEW ITEM TO LIST, GETS PASSED VIA PROPS
 handleAddItem = (newItem)=>{
   this.setState({
     todos: [...this.state.todos, newItem]
+  })
+}
+
+//HELPER FUNCTION FOR PUTTING LINE THROUGH ITEM THAT"S COMPLETED
+handleCompletedItem = (clickedOnId) => {
+  this.setState({
+    ...this.state, todos: this.state.todos.map((item)=>{
+      if (item.id===clickedOnId){
+        return {
+          ...item, completed: !item.completed
+        }
+      } else {
+        return item;
+      }
+    })
   })
 }
 
@@ -52,7 +68,7 @@ handleAddItem = (newItem)=>{
     return (
       <div className="catchAll">
         <h2>To Do List</h2>
-        <ToDoList todos={this.state.todos} />
+        <ToDoList todos={this.state.todos} handleCompletedItem={this.handleCompletedItem} />
         <ToDoForm todos={this.state.todos} handleAddItem={this.handleAddItem} />
       </div>
     );
