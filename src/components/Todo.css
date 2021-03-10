@@ -53,10 +53,16 @@ button {
     padding: 1rem;
     font-size: 1.8rem;
     font-weight: bold;
+    margin: 1rem;
 }
 .howToKey {
     text-align: center;
 }
+.ToDoForm {
+    text-align: center;
+}
+
+/* MEDIA QUERY FOR MOBILE */
 
 @media (max-width: 750px){
     .ToDoForm {

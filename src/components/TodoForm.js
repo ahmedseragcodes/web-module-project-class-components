@@ -39,6 +39,7 @@ class ToDoForm extends React.Component{
                         <button>Add Item</button>
                     </label>
                     </form>
+                    <button onClick={this.props.handleClearComplete}>Clear Completed</button>
                     <p className="howToKey">*Click Each Task When Done To Cross It Out</p>
                 </div>
             )

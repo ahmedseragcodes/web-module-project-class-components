@@ -64,12 +64,30 @@ handleCompletedItem = (clickedOnId) => {
   })
 }
 
+//HELPER FUNCTION PASSED TO TODO FORM THAT CLEARS COMPLETED ITEMS
+handleClearComplete = (event) => {
+  event.stopPropagation();
+  this.setState({
+    ...this.state, todos: this.state.todos.map((listItem)=>{
+      if (listItem.completed===true){
+        return {
+          ...listItem, completed: false
+        }
+      } else {
+        return {
+          ...listItem
+        }
+      }
+    })
+  })
+}
+
   render() {
     return (
       <div className="catchAll">
         <h2>To Do List</h2>
         <ToDoList todos={this.state.todos} handleCompletedItem={this.handleCompletedItem} />
-        <ToDoForm todos={this.state.todos} handleAddItem={this.handleAddItem} />
+        <ToDoForm todos={this.state.todos} handleAddItem={this.handleAddItem} handleClearComplete={this.handleClearComplete} />
       </div>
     );
   }
