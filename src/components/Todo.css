@@ -1,0 +1,75 @@
+/*GENERAL STYLING */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'PT Sans', "sans-serif";
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    color: white;
+}
+
+
+/* CUSTOM STYLING */
+
+.catchAll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.individualItem {
+    box-shadow: 1rem 1rem 2rem 0rem white;
+    padding: 1rem;
+    margin: 1rem;
+}
+.individualItemcompleted {
+    box-shadow: 1rem 1rem 2rem 0rem white;
+    padding: 1rem;
+    margin: 1rem;
+    text-decoration: line-through;
+}
+input, label {
+    margin: 1rem;
+
+}
+input {
+    border: .75rem ridge white;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #80D0C7;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+}
+button {
+    border: .75rem ridge white;
+    border-radius: 1rem;
+    color: white;
+    background-color: #80D0C7;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+.howToKey {
+    text-align: center;
+}
+.ToDoForm {
+    text-align: center;
+}
+
+/* MEDIA QUERY FOR MOBILE */
+
+@media (max-width: 750px){
+    .ToDoForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        text-align: center;
+    }
+}
